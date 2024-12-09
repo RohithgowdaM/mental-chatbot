@@ -155,6 +155,6 @@ def get_bot_response():
 
 
 
-
 if __name__ == "__main__":
-    app.run()
+    from os import environ
+    app.run(host="0.0.0.0", port=environ.get("PORT", 5000))
